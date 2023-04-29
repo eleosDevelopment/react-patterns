@@ -1,7 +1,12 @@
+import { Routes, Route } from "react-router-dom";
+import {Home} from "./containers/index.js"
+
 function App() {
   return (
-    <div className="App">
-      <h1>React Design Patterns</h1>
+    <div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
     </div>
   );
 }
