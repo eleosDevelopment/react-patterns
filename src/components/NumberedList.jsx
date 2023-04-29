@@ -1,4 +1,4 @@
-export function ListItems({
+export function NumberedList({
   items,
   resourceName,
   itemComponent: ItemComponent,
@@ -6,7 +6,10 @@ export function ListItems({
   return (
     <>
       {items.map((item, i) => (
+        <>
+        <h3>{i + 1}</h3>
         <ItemComponent key={i} {...{ [resourceName]: item }} />
+        </>
       ))}
     </>
   );

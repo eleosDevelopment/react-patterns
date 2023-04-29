@@ -2,6 +2,9 @@ import { SplitScreen } from "../components/SplitScreen.jsx";
 import { ListItems } from "../components/ListItems.jsx";
 import { SmallPersonListItem } from "../people/SmallPersonListItem.js";
 import { LargePersonListItem } from "../people/LargePersonListItem.js";
+import { SmallProductListItem } from "../products/SmallProductListItem.js";
+import { LargeProductListItem } from "../products/LargeProductListItem.js";
+import { NumberedList } from "../components/NumberedList.jsx";
 
 const people = [{
 	name: 'John Doe',
@@ -52,6 +55,8 @@ export function Home() {
         <h4>List Items</h4>
         <ListItems items={people} resourceName="person" itemComponent={SmallPersonListItem}/>
         <ListItems items={people} resourceName="person" itemComponent={LargePersonListItem}/>
+				<NumberedList items={products} resourceName="product" itemComponent={SmallProductListItem}/>
+				<ListItems items={products} resourceName="product" itemComponent={LargeProductListItem}/>
       </div>
     </section>
   );
